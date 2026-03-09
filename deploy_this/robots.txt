@@ -1,3 +1,15 @@
+# Robots.txt for CX Agency - Optimized March 2026
 User-agent: *
 Allow: /
+Disallow: /js/           # No need for bots to crawl your raw Three.js logic
+Disallow: /css/          # Hide style rules to save crawl budget
+
+# Explicitly invite AI crawlers to your thought leadership
+User-agent: GPTBot
+Allow: /pages/ai-in-cx.html
+Allow: /pages/article-ai-qbr-framework.html
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://cxagency.io/sitemap.xml

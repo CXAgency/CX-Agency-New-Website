@@ -1,0 +1,45 @@
+{
+  "hosting": {
+    "public": "deploy_this",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "trailingSlash": false,
+    "redirects": [
+      { "source": "/churn-crusher", "destination": "/pages/churn-crusher.html", "type": 301 },
+      { "source": "/ai-in-cx", "destination": "/pages/ai-in-cx.html", "type": 301 },
+      { "source": "/complete-cx-os", "destination": "/pages/complete-cx-os.html", "type": 301 },
+      { "source": "/about", "destination": "/pages/about.html", "type": 301 },
+      { "source": "/services", "destination": "/pages/services.html", "type": 301 },
+      { "source": "/resources", "destination": "/pages/resources.html", "type": 301 },
+      { "source": "/contact", "destination": "/pages/contact.html", "type": 301 },
+      { "source": "/products", "destination": "/pages/products.html", "type": 301 },
+      { "source": "/churn-diagnostic", "destination": "/pages/churn-diagnostic.html", "type": 301 }
+    ],
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          { "key": "X-Frame-Options", "value": "DENY" },
+          { "key": "X-Content-Type-Options", "value": "nosniff" },
+          { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+          { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+        ]
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|png|svg|webp|woff2|woff|ttf)",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        ]
+      },
+      {
+        "source": "**/*.@(css|js)",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=604800" }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cxagency.io/sitemap.xml

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Needs -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Free Churn Diagnostic for B2B SaaS | CX Agency</title>
+  <meta name="description" content="Take our free 5-minute churn diagnostic for B2B SaaS companies. Get a personalised score and a clear recommendation for your next steps in improving retention.">
+  <meta name="keywords" content="churn diagnostic, free churn analysis, b2b saas, customer retention, churn rate">
+  <meta name="author" content="CX Agency">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cxagency.io/pages/churn-diagnostic.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="../images/logo.jpeg">
+  <link rel="apple-touch-icon" href="../images/logo.jpeg">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Free Churn Diagnostic for B2B SaaS | CX Agency">
+  <meta property="og:description" content="Take our free 5-minute churn diagnostic for B2B SaaS companies. Get a personalised score and a clear recommendation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cxagency.io/pages/churn-diagnostic.html">
+  <meta property="og:site_name" content="CX Agency">
+  <meta property="og:image" content="https://cxagency.io/images/logo.jpeg">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Free Churn Diagnostic for B2B SaaS | CX Agency">
+  <meta name="twitter:description" content="Take our free 5-minute churn diagnostic for B2B SaaS companies. Get a personalised score and a clear recommendation.">
+  <meta name="twitter:image" content="https://cxagency.io/images/logo.jpeg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Free Churn Diagnostic for B2B SaaS | CX Agency",
+    "description": "A free, 5-minute churn diagnostic to assess your retention strategy and get personalised recommendations.",
+    "url": "https://cxagency.io/pages/churn-diagnostic.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CX Agency (CX Advisory Ltd)",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cxagency.io/images/logo.jpeg"
+      }
+    }
+  }
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .diag-hero { background: var(--navy); padding: 120px 0 64px; text-align: center; }
+    .diag-hero h1 { color: var(--white); margin-bottom: 16px; }
+    .diag-hero p { color: rgba(255,255,255,0.65); max-width: 540px; margin: 0 auto; font-size: 17px; line-height: 1.7; }
+    .diag-meta { display: flex; align-items: center; justify-content: center; gap: 32px; margin-top: 32px; flex-wrap: wrap; }
+    .diag-meta-item { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.5); font-size: 13px; font-family: var(--ff-mono); letter-spacing: 0.05em; }
+    .diag-meta-item .dm-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+    .diag-body { padding: 72px 0 96px; background: var(--off-white); min-height: 60vh; }
+    .diag-card { background: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--stone); max-width: 680px; margin: 0 auto; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+    .diag-progress { height: 4px; background: var(--stone); }
+    .diag-progress-fill { height: 100%; background: var(--gold); transition: width 0.4s ease; }
+    .diag-progress-label { display: flex; justify-content: space-between; padding: 16px 32px 0; font-size: 12px; color: var(--muted); font-family: var(--ff-mono); letter-spacing: 0.05em; }
+    .diag-q { padding: 32px 32px 24px; display: none; }
+    .diag-q.active { display: block; }
+    .q-num { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .q-text { font-size: 20px; font-weight: 600; color: var(--navy); line-height: 1.4; margin-bottom: 8px; }
+    .q-sub { font-size: 14px; color: var(--text-light); margin-bottom: 28px; line-height: 1.6; }
+    .q-options { display: flex; flex-direction: column; gap: 10px; }
+    .q-option { display: flex; align-items: flex-start; gap: 14px; padding: 16px 18px; border: 1.5px solid var(--stone); border-radius: var(--radius); cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+    .q-option:hover { border-color: var(--gold); background: rgba(47,128,237,0.03); }
+    .q-option.selected { border-color: var(--gold); background: rgba(47,128,237,0.06); }
+    .q-option input[type="radio"] { margin-top: 2px; accent-color: var(--gold); flex-shrink: 0; width: 16px; height: 16px; }
+    .q-option-body { flex: 1; }
+    .q-option-label { font-size: 15px; font-weight: 500; color: var(--navy); margin-bottom: 2px; }
+    .q-option-desc { font-size: 13px; color: var(--text-light); line-height: 1.5; }
+    .diag-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px 28px; border-top: 1px solid var(--stone); }
+    .diag-nav-back { font-size: 14px; color: var(--muted); cursor: pointer; background: none; border: none; font-family: var(--ff-body); }
+    .diag-nav-back:hover { color: var(--text); }
+    .diag-nav-back:disabled { opacity: 0.3; cursor: default; }
+    .diag-result { padding: 40px 32px; display: none; }
+    .diag-result.active { display: block; }
+    .result-score-bar { height: 8px; background: var(--stone); border-radius: 4px; margin: 20px 0 8px; overflow: hidden; }
+    .result-score-fill { height: 100%; border-radius: 4px; transition: width 1s ease; }
+    .result-score-fill.low { background: #E05252; }
+    .result-score-fill.mid { background: #E08C2F; }
+    .result-score-fill.high { background: #2D9D6E; }
+    .result-label { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
+    .result-headline { font-size: 22px; font-weight: 700; color: var(--navy); margin: 20px 0 10px; line-height: 1.3; }
+    .result-body { font-size: 15px; color: var(--text-light); line-height: 1.7; margin-bottom: 28px; }
+    .result-rec { background: var(--off-white); border: 1px solid var(--stone); border-radius: var(--radius); padding: 20px 22px; margin-bottom: 16px; }
+    .result-rec-tag { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .result-rec h4 { font-size: 16px; color: var(--navy); margin-bottom: 6px; }
+    .result-rec p { font-size: 14px; color: var(--text-light); line-height: 1.6; margin-bottom: 14px; }
+    .result-score-display { text-align: center; padding: 20px 0 24px; }
+    .rsd-num { font-family: var(--ff-display); font-size: 64px; color: var(--navy); line-height: 1; }
+    .rsd-label { font-size: 14px; color: var(--text-light); margin-top: 6px; }
+    .result-insights { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+    .ri-item { background: var(--off-white); border-radius: var(--radius); padding: 14px 16px; }
+    .ri-item .ri-label { font-size: 11px; color: var(--muted); font-family: var(--ff-mono); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
+    .ri-item .ri-val { font-size: 14px; font-weight: 600; color: var(--navy); }
+    .email-capture { background: rgba(47,128,237,0.05); border: 1px solid rgba(47,128,237,0.2); border-radius: var(--radius); padding: 20px 22px; margin-bottom: 16px; }
+    .email-capture p { font-size: 14px; color: var(--text-light); margin-bottom: 14px; }
+    .email-capture input { width: 100%; padding: 11px 14px; border: 1.5px solid var(--stone); border-radius: var(--radius); font-family: var(--ff-body); font-size: 14px; color: var(--text); margin-bottom: 10px; outline: none; }
+    .email-capture input:focus { border-color: var(--gold); }
+    .email-note { font-size: 12px; color: var(--muted); margin-top: 8px; }
+    .restart-btn { background: none; border: none; font-family: var(--ff-body); font-size: 13px; color: var(--muted); cursor: pointer; text-decoration: underline; margin-top: 12px; display: block; }
+    .restart-btn:hover { color: var(--text); }
+    @media (max-width: 600px) {
+      .diag-q, .diag-result { padding: 24px 20px; }
+      .diag-nav { padding: 16px 20px 24px; }
+      .result-insights { grid-template-columns: 1fr; }
+      .diag-progress-label { padding: 12px 20px 0; }
+    }
+  </style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J12TFT4TCX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J12TFT4TCX');
+</script>
+</head>
+<body>
+
+<nav class="nav scrolled">
+  <a href="../index.html" class="nav-logo"><img src="../images/logo.jpeg" alt="CX Agency" style="width:40px;height:40px;border-radius:8px;object-fit:cover;"></a>
+  <div class="nav-links">
+    <a href="../index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="services.html">Services</a>
+    <a href="resources.html">Resources</a>
+    <a href="about.html">About</a>
+  </div>
+  <a href="contact.html" class="btn btn--primary btn--sm">Get in Touch</a>
+  <div class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="diag-hero">
+  <div class="container">
+    <div class="label">Free Assessment</div>
+    <h1>The CX Churn Diagnostic</h1>
+    <p>8 questions. 5 minutes. Get a personalised score and a clear recommendation on the right next step for your CX operation.</p>
+    <div class="diag-meta">
+      <div class="diag-meta-item"><div class="dm-dot"></div>8 questions</div>
+      <div class="diag-meta-item"><div class="dm-dot"></div>Takes ~5 minutes</div>
+      <div class="diag-meta-item"><div class="dm-dot"></div>No credit card</div>
+      <div class="diag-meta-item"><div class="dm-dot"></div>Instant result</div>
+    </div>
+  </div>
+</div>
+
+<div class="diag-body">
+  <div class="container">
+    <div class="diag-card">
+
+      <div class="diag-progress-label">
+        <span id="progressLabel">Question 1 of 8</span>
+        <span id="progressPct">0% complete</span>
+      </div>
+      <div class="diag-progress">
+        <div class="diag-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+
+      <div class="diag-q active" id="q1">
+        <div class="q-num">Question 01 / 08</div>
+        <div class="q-text">How would you describe your current churn situation?</div>
+        <div class="q-sub">Be as honest as you can — this shapes your entire diagnostic result.</div>
+        <div class="q-options">
+          <label class="q-option"><input type="radio" name="q1" value="1"><div class="q-option-body"><div class="q-option-label">We're bleeding customers</div><div class="q-option-desc">Churn is visibly hurting the business. It's a live crisis.</div></div></label>
+          <label class="q-option"><input type="radio" name="q1" value="2"><div class="q-option-body"><div class="q-option-label">We have a churn problem but it's manageable</div><div class="q-option-desc">We're losing customers regularly but it hasn't hit emergency levels yet.</div></div></label>
+          <label class="q-option"><input type="radio" name="q1" value="3"><div class="q-option-body"><div class="q-option-label">Our churn is stable — but we don't really know why</div><div class="q-option-desc">Numbers look okay but we lack visibility into what's driving retention.</div></div></label>
+          <label class="q-option"><input type="radio" name="q1" value="4"><div class="q-option-body"><div class="q-option-label">We have strong retention and want to scale it with AI</div><div class="q-option-desc">Retention is solid. The next challenge is efficiency and scale.</div></div></label>
+        </div>
+        <div class="diag-nav">
+          <button class="diag-nav-back" disabled>← Back</button>
+          <button class="btn btn--primary" onclick="nextQ(1)">Next →</button>
+        </div>
+      </div>
+
+      <div class="diag-q" id="q2">
+        <div class="q-num">Question 02 / 08</div>
+        <div class="q-text">Do you know the primary reasons customers are churning?</div>
+        <div class="q-sub">Not what you think — what the data actually tells you.</div>
+        <div class="q-options">
+          <label class="q-option"><input type="radio" name="q2" value="1"><div class="q-option-body"><div class="q-option-label">No — we have guesses but no data</div><div class="q-option-desc">We don't have a formal exit interview or churn analysis process.</div></div></label>
+          <label class="q-option"><input type="radio" name="q2" value="2"><div class="q-option-body"><div class="q-option-label">Partially — we collect some feedback but it's inconsistent</div><div class="q-option-desc">Some churn data exists but it's not structured or actioned.</div></div></label>
+          <label class="q-option"><input type="radio" name="q2" value="3"><div class="q-option-body"><div class="q-option-label">Yes — we have a documented churn root cause framework</div><div class="q-option-desc">We track churn reasons, categorise them, and use the data to prioritise fixes.</div></div></label>
+        </div>
+        <div class="diag-nav">
+          <button class="diag-nav-back" onclick="prevQ(2)">← Back</button>
+          <button class="btn btn--primary" onclick="nextQ(2)">Next →</button>
+        </div>
+      </div>
+
+      <div class="diag-q" id="q3">
+        <div class="q-num">Question 03 / 08</div>
+        <div class="q-text">Does your team have a documented retention playbook?</div>
+        <div class="q-sub">A specific set of plays your CSMs run when accounts show risk signals.</div>
+        <div class="q-options">
+          <label class="q-option"><input type="radio" name="q3" value="1"><div class="q-option-body"><div class="q-option-label">No — it's all in people's heads</div><div class="q-option-desc">Each CSM handles at-risk accounts differently based on instinct.</div></div></label>
+          <label class="q-option"><input type="radio" name="q3" value="2"><div class="q-option-body"><div class="q-option-label">We have some informal process but nothing documented</div><div class="q-option-desc">There's a loose approach but no playbook the team consistently follows.</div></div></label>
+          <label class="q-option"><input type="radio" name="q3" value="3"><div class="q-option-body"><div class="q-option-label">Yes — we have a documented, consistently used playbook</div><div class="q-option-desc">Defined risk triggers, escalation paths, and retention plays the team follows.</div></div></label>
+        </div>
+        <div class="diag-nav">
+          <button class="diag-nav-back" onclick="prevQ(3)">← Back</button>
+          <button class="btn btn--primary" onclick="nextQ(3)">Next →</button>
+        </div>
+      </div>
+
+      <div class="diag-q" id="q4">
+        <div class="q-num">Question 04 / 08</div>
+        <div class="q-text">How do you identify customers who are at risk of churning?</div>
+        <div class="q-sub">What your early warning system looks like — if you have one.</div>
+        <div class="q-options">
+          <label class="q-option"><input type="radio" name="q4" value="1"><div class="q-option-body"><div class="q-option-label">We find out when they cancel or go quiet</div><div class="q-option-desc">No proactive early warning — we react when it's often too late.</div></div></label>
+          <label class="q-option"><input type="radio" name="q4" value="2"><div class="q-option-body"><div class="q-option-label">We use basic signals (low login, support tickets, renewal dates)</div><div class="q-option-desc">Some manual monitoring but no automated health scoring.</div></div></label>
+          <label class="q-option"><input type="radio" name="q4" value="3"><div class="q-option-body"><div class="q-option-label">We have a health score model that tracks risk proactively</div><div class="q-option-desc">Automated signals trigger CSM actions before customers reach crisis point.</div></div></label>
+          <label class="q-option"><input type="radio" name="q4" value="4"><div class="q-option-body"><div class="q-option-label">We use AI/ML-based predictive churn models</div><div class="q-option-desc">Sophisticated predictive tooling that flags risk well in advance.</div></div></label>
+        </div>
+        <div class="diag-nav">
+          <button class="diag-nav-back" onclick="prevQ(4)">← Back</button>
+          <button class="btn btn--primary" onclick="nextQ(4)">Next →</button>
+        </div>
+      </div>
+
+      <div class="diag-q" id="q5">
+        <div class="q-num">Question 05 / 08</div>
+        <div class="q-text">What CX metrics does your leadership team review regularly?</div>
+        <div class="q-sub">Not what you track — what actually gets discussed and acted on.</div>
+        <div class="q-options">
+          <label class="q-option"><input type="radio" name="q5" value="1"><div class="q-option-body"><div class="q-option-label">Mostly activity metrics (tickets, calls, NPS)</div><div class="q-option-desc">Volume and satisfaction scores dominate. Revenue retention is secondary.</div></div></label>
+          <label class="q-option"><input type="radio" name="q5" value="2"><div class="q-option-body"><div class="q-option-label">A mix — some operational, some revenue metrics (NRR, GRR)</div><div class="q-option-desc">We look at retention revenue but it's not the primary lens.</div></div></label>
+          <label class="q-option"><input type="radio" name="q5" value="3"><div class="q-option-body"><div class="q-option-label">NRR, GRR, expansion and churn are our primary metrics</div><div class="q-option-desc">CX is measured in revenue terms. The team knows their NRR number.</div></div></label>
+        </div>
+        <div class="diag-nav">
+          <button class="diag-nav-back" onclick="prevQ(5)">← Back</button>
+          <button class="btn btn--primary" onclick="nextQ(5)">Next →</button>
+        </div>
+      </div>
+
+      <div class="diag-q" id="q6">
+        <div class="q-num">Question 06 / 08</div>
+        <div class="q-text">How is AI currently used in your customer experience operation?</div>
+        <div class="q-sub">Be honest about where you actually are — not where you aspire to be.</div>
+        <div class="q-options">
+          <label class="q-option"><input type="radio" name="q6" value="1"><div class="q-option-body"><div class="q-option-label">We're not using AI at all in CX</div><div class="q-option-desc">AI hasn't entered our CX stack yet. It's on the roadmap but not active.</div></div></label>
+          <label class="q-option"><input type="radio" name="q6" value="2"><div class="q-option-body"><div class="q-option-label">We're experimenting — a chatbot or one AI tool</div><div class="q-option-desc">First steps taken but no coordinated AI strategy across CX.</div></div></label>
+          <label class="q-option"><input type="radio" name="q6" value="3"><div class="q-option-body"><div class="q-option-label">AI is used in parts of our operation but not systematically</div><div class="q-option-desc">Multiple AI tools but no unified framework. Results are inconsistent.</div></div></label>
+          <label class="q-option"><input type="radio" name="q6" value="4"><div class="q-option-body"><div class="q-option-label">AI is embedded across our CX workflows with clear ROI tracking</div><div class="q-option-desc">Systematic AI implementation. We measure AI's impact on outcomes.</div></div></label>
+        </div>
+        <div class="diag-nav">
+          <button class="diag-nav-back" onclick="prevQ(6)">← Back</button>
+          <button class="btn btn--primary" onclick="nextQ(6)">Next →</button>
+        </div>
+      </div>
+
+      <div class="diag-q" id="q7">
+        <div class="q-num">Question 07 / 08</div>
+        <div class="q-text">How would you describe your team's capacity to improve CX right now?</div>
+        <div class="q-sub">This helps us understand whether you need tools or hands-on support.</div>
+        <div class="q-options">
+          <label class="q-option"><input type="radio" name="q7" value="1"><div class="q-option-body"><div class="q-option-label">We're overwhelmed — no bandwidth for strategic projects</div><div class="q-option-desc">The team is firefighting. No time for structured improvement work.</div></div></label>
+          <label class="q-option"><input type="radio" name="q7" value="2"><div class="q-option-body"><div class="q-option-label">Limited bandwidth — we need a clear, fast-to-implement system</div><div class="q-option-desc">We can carve out time if the system is ready-to-use, not a project to build.</div></div></label>
+          <label class="q-option"><input type="radio" name="q7" value="3"><div class="q-option-body"><div class="q-option-label">We have dedicated capacity for CX improvement this quarter</div><div class="q-option-desc">CX transformation is a business priority and we have resource allocated.</div></div></label>
+        </div>
+        <div class="diag-nav">
+          <button class="diag-nav-back" onclick="prevQ(7)">← Back</button>
+          <button class="btn btn--primary" onclick="nextQ(7)">Next →</button>
+        </div>
+      </div>
+
+      <div class="diag-q" id="q8">
+        <div class="q-num">Question 08 / 08</div>
+        <div class="q-text">What's your primary CX goal for the next 12 months?</div>
+        <div class="q-sub">This points you toward the right product or service.</div>
+        <div class="q-options">
+          <label class="q-option"><input type="radio" name="q8" value="1"><div class="q-option-body"><div class="q-option-label">Stop the churn — we need to stabilise retention urgently</div><div class="q-option-desc">Priority is fixing the foundation before anything else.</div></div></label>
+          <label class="q-option"><input type="radio" name="q8" value="2"><div class="q-option-body"><div class="q-option-label">Implement AI to scale our CX without scaling headcount</div><div class="q-option-desc">Efficiency and scale are the mandate. AI is the vehicle.</div></div></label>
+          <label class="q-option"><input type="radio" name="q8" value="3"><div class="q-option-body"><div class="q-option-label">Both — fix retention and embed AI across the operation</div><div class="q-option-desc">Full transformation. Retention foundation and AI scale.</div></div></label>
+          <label class="q-option"><input type="radio" name="q8" value="4"><div class="q-option-body"><div class="q-option-label">Drive NRR growth through expansion and upsell</div><div class="q-option-desc">Retention is solid — we want to drive growth from existing customers.</div></div></label>
+        </div>
+        <div class="diag-nav">
+          <button class="diag-nav-back" onclick="prevQ(8)">← Back</button>
+          <button class="btn btn--primary" onclick="showResult()">Get My Result →</button>
+        </div>
+      </div>
+
+      <div class="diag-result" id="result">
+        <div id="resultContent"></div>
+        <button class="restart-btn" onclick="restartDiag()">← Start again</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo"><img src="../images/logo.jpeg" alt="CX Agency" style="width:40px;height:40px;border-radius:8px;object-fit:cover;"></a>
+        <p class="fb-tagline">The CX Operating System for B2B SaaS teams. Built by operators, for operators.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="churn-crusher.html">Churn Crusher OS™</a></li>
+          <li><a href="ai-in-cx.html">AI in CX OS™</a></li>
+          <li><a href="complete-cx-os.html">The Complete CX OS™</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:sales@cxagency.io">sales@cxagency.io</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 CX Agency. All rights reserved.</p>
+      <div style="display:flex;gap:24px"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+  let answers = {};
+  const totalQ = 8;
+
+  function updateProgress(current) {
+    const pct = Math.round(((current - 1) / totalQ) * 100);
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressLabel').textContent = current <= totalQ ? 'Question ' + current + ' of 8' : 'Complete';
+    document.getElementById('progressPct').textContent = pct + '% complete';
+  }
+
+  function nextQ(qNum) {
+    const selected = document.querySelector('input[name="q' + qNum + '"]:checked');
+    if (!selected) {
+      document.querySelectorAll('#q' + qNum + ' .q-option').forEach(function(o) {
+        o.style.borderColor = '#E05252';
+        setTimeout(function() { o.style.borderColor = ''; }, 800);
+      });
+      return;
+    }
+    answers['q' + qNum] = parseInt(selected.value);
+    document.getElementById('q' + qNum).classList.remove('active');
+    if (qNum < totalQ) {
+      document.getElementById('q' + (qNum + 1)).classList.add('active');
+      updateProgress(qNum + 1);
+    }
+  }
+
+  function prevQ(qNum) {
+    document.getElementById('q' + qNum).classList.remove('active');
+    document.getElementById('q' + (qNum - 1)).classList.add('active');
+    updateProgress(qNum - 1);
+  }
+
+  document.querySelectorAll('.q-option').forEach(function(opt) {
+    opt.addEventListener('click', function() {
+      var name = this.querySelector('input').name;
+      document.querySelectorAll('input[name="' + name + '"]').forEach(function(i) {
+        i.closest('.q-option').classList.remove('selected');
+      });
+      this.classList.add('selected');
+    });
+  });
+
+  function calcScore() {
+    var score = 0;
+    var weights = { q1: [0,1,2,4], q2: [1,2,4], q3: [1,2,4], q4: [1,2,3,4], q5: [1,2,4], q6: [1,2,3,4], q7: [1,2,3], q8: [1,2,3,4] };
+    for (var q in answers) {
+      var w = weights[q];
+      score += w[answers[q] - 1] || 0;
+    }
+    return Math.round((score / 30) * 100);
+  }
+
+  function getRecommendation(score) {
+    var q6 = answers.q6 || 1;
+    if (score < 35) {
+      return {
+        tier: 'Foundation First', colour: 'low',
+        headline: 'Your CX operation needs a solid foundation before anything else.',
+        body: 'The diagnostic shows gaps in churn root cause visibility, retention processes, and health scoring. These are fixable with the right system. Your first move should be the Churn Crusher OS — it gives you the diagnosis framework, retention playbook, and KPI dashboard to stabilise and build from.',
+        primary: { name: 'Churn Crusher OS™', price: '£197', url: 'churn-crusher.html', tag: 'Recommended for you', desc: 'Fix the foundation: churn diagnosis, retention playbook, KPI dashboard, and 90-day implementation roadmap.' },
+        secondary: null
+      };
+    } else if (score < 65) {
+      if (q6 >= 3) {
+        return {
+          tier: 'AI Readiness', colour: 'mid',
+          headline: 'You have retention basics in place — time to scale with AI.',
+          body: 'Your retention foundation is building, but you\'re not yet running a systematic AI programme. The AI in CX OS gives you the readiness assessment, vendor scorecard, ROI calculator, and 4-phase implementation framework to do this properly.',
+          primary: { name: 'AI in CX OS™', price: '£297', url: 'ai-in-cx.html', tag: 'Recommended for you', desc: '50-page playbook, 175-point AI readiness assessment, ROI calculator, vendor scorecard and Notion databases.' },
+          secondary: { name: 'The Complete CX OS™', price: '£397', url: 'complete-cx-os.html', tag: 'Best value', desc: 'Get both operating systems and save £97 vs buying separately. Includes onboarding call.' }
+        };
+      }
+      return {
+        tier: 'Full Transformation', colour: 'mid',
+        headline: 'You\'re partway there — but gaps remain in both retention and AI.',
+        body: 'You have some processes in place but the diagnostic reveals inconsistencies in how your team handles at-risk accounts, and AI hasn\'t been implemented systematically. The Complete CX OS gives you both operating systems at the best value.',
+        primary: { name: 'The Complete CX OS™', price: '£397', url: 'complete-cx-os.html', tag: 'Recommended for you', desc: 'Both the Churn Crusher OS and AI in CX OS, plus onboarding call and 12 months of updates. Save £97.' },
+        secondary: { name: 'Churn Crusher OS™', price: '£197', url: 'churn-crusher.html', tag: 'Start here if budget is tight', desc: 'Fix the retention foundation first, then upgrade to AI in CX OS when ready.' }
+      };
+    } else {
+      return {
+        tier: 'Scale & Optimise', colour: 'high',
+        headline: 'Your CX operation is mature — the opportunity is scale and optimisation.',
+        body: 'You have strong CX fundamentals. The next frontier is systematically embedding AI and optimising for NRR growth. If you\'re not yet running a coordinated AI programme with clear ROI tracking, the AI in CX OS will give you the framework.',
+        primary: { name: 'AI in CX OS™', price: '£297', url: 'ai-in-cx.html', tag: 'Your next move', desc: '50-page AI playbook, readiness assessment, ROI calculator, vendor scorecard, and Notion implementation databases.' },
+        secondary: { name: 'Book a Discovery Call', price: 'Free', url: 'contact.html', tag: 'For hands-on expert support', desc: 'Talk to CX Agency about a CX OS Build or AI Implementation engagement tailored to your business.' }
+      };
+    }
+  }
+
+  function showResult() {
+    var selected = document.querySelector('input[name="q8"]:checked');
+    if (!selected) {
+      document.querySelectorAll('#q8 .q-option').forEach(function(o) {
+        o.style.borderColor = '#E05252';
+        setTimeout(function() { o.style.borderColor = ''; }, 800);
+      });
+      return;
+    }
+    answers.q8 = parseInt(selected.value);
+    document.querySelectorAll('.diag-q').forEach(function(q) { q.classList.remove('active'); });
+    document.getElementById('progressFill').style.width = '100%';
+    document.getElementById('progressLabel').textContent = 'Complete';
+    document.getElementById('progressPct').textContent = '100% complete';
+
+    var score = calcScore();
+    var rec = getRecommendation(score);
+    var priority = score < 35 ? 'Immediate' : score < 65 ? 'This quarter' : 'Optimise & scale';
+
+    var secondaryHtml = '';
+    if (rec.secondary) {
+      secondaryHtml = '<div class="result-rec"><div class="result-rec-tag">' + rec.secondary.tag + '</div><h4>' + rec.secondary.name + (rec.secondary.price !== 'Free' ? ' — ' + rec.secondary.price : '') + '</h4><p>' + rec.secondary.desc + '</p><a href="' + rec.secondary.url + '" class="btn btn--outline" style="display:inline-block">View ' + rec.secondary.name.split(' ').slice(0,3).join(' ') + ' →</a></div>';
+    }
+
+    document.getElementById('resultContent').innerHTML =
+      '<div class="result-label" style="color:var(--gold)">Your Diagnostic Result</div>' +
+      '<div class="result-score-display"><div class="rsd-num">' + score + '</div><div class="rsd-label">CX Maturity Score (out of 100)</div></div>' +
+      '<div class="result-score-bar"><div class="result-score-fill ' + rec.colour + '" id="scoreFill" style="width:0%"></div></div>' +
+      '<div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted);font-family:var(--ff-mono);margin-bottom:24px;"><span>Foundation needed</span><span>Fully optimised</span></div>' +
+      '<div class="result-insights"><div class="ri-item"><div class="ri-label">Tier</div><div class="ri-val">' + rec.tier + '</div></div><div class="ri-item"><div class="ri-label">Priority</div><div class="ri-val">' + priority + '</div></div></div>' +
+      '<div class="result-headline">' + rec.headline + '</div>' +
+      '<div class="result-body">' + rec.body + '</div>' +
+      '<div class="result-rec"><div class="result-rec-tag">' + rec.primary.tag + '</div><h4>' + rec.primary.name + ' — ' + rec.primary.price + '</h4><p>' + rec.primary.desc + '</p><a href="' + rec.primary.url + '" class="btn btn--primary" style="display:inline-block">Get ' + rec.primary.name + ' →</a></div>' +
+      secondaryHtml +
+      '<div class="email-capture"><div class="result-rec-tag">Optional — Get your results by email</div><p>Enter your email to receive your diagnostic result and recommendations. No spam, ever.</p><input type="email" id="emailInput" placeholder="you@company.com"><button class="btn btn--outline" style="width:100%" onclick="sendEmail()">Send me my results →</button><div class="email-note">By submitting you agree to our <a href="privacy.html" style="color:var(--gold)">Privacy Policy</a>. Unsubscribe anytime.</div></div>';
+
+    document.getElementById('result').classList.add('active');
+    setTimeout(function() {
+      var fill = document.getElementById('scoreFill');
+      if (fill) fill.style.width = score + '%';
+    }, 100);
+  }
+
+  function sendEmail() {
+    var email = document.getElementById('emailInput').value;
+    if (!email || email.indexOf('@') === -1) {
+      document.getElementById('emailInput').style.borderColor = '#E05252';
+      return;
+    }
+    var btn = document.querySelector('.email-capture .btn--outline');
+    btn.textContent = 'Results sent! Check your inbox.';
+    btn.style.opacity = '0.6';
+    btn.disabled = true;
+  }
+
+  function restartDiag() {
+    answers = {};
+    document.querySelectorAll('input[type="radio"]').forEach(function(i) { i.checked = false; });
+    document.querySelectorAll('.q-option').forEach(function(o) { o.classList.remove('selected'); });
+    document.getElementById('result').classList.remove('active');
+    document.getElementById('q1').classList.add('active');
+    document.getElementById('progressFill').style.width = '0%';
+    document.getElementById('progressLabel').textContent = 'Question 1 of 8';
+    document.getElementById('progressPct').textContent = '0% complete';
+  }
+</script>
+</body>
+</html>

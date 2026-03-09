@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Needs -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>CX Consultancy Services for B2B SaaS | CX Agency UK</title>
+  <meta name="description" content="Fixed-scope CX consultancy services for UK B2B SaaS leaders. We offer strategy, AI implementation, and operational improvement with clear deliverables.">
+  <meta name="keywords" content="cx consultancy, customer experience services, b2b saas, cx strategy, ai implementation, uk">
+  <meta name="author" content="CX Agency">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cxagency.io/pages/services.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="../images/logo.jpeg">
+  <link rel="apple-touch-icon" href="../images/logo.jpeg">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="CX Consultancy Services for B2B SaaS | CX Agency UK">
+  <meta property="og:description" content="Fixed-scope CX consultancy for B2B SaaS leaders. Strategy, AI implementation, and operational improvement with clear deliverables.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cxagency.io/pages/services.html">
+  <meta property="og:site_name" content="CX Agency">
+  <meta property="og:image" content="https://cxagency.io/images/logo.jpeg">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CX Consultancy Services for B2B SaaS | CX Agency UK">
+  <meta name="twitter:description" content="Fixed-scope CX consultancy for B2B SaaS leaders. Strategy, AI implementation, and operational improvement.">
+  <meta name="twitter:image" content="https://cxagency.io/images/logo.jpeg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Customer Experience Consultancy",
+    "provider": {
+      "@type": "Organization",
+      "name": "CX Agency (CX Advisory Ltd)"
+    },
+    "description": "Fixed-scope CX consultancy services for B2B SaaS leaders, focusing on strategy, AI implementation, and operational improvement.",
+    "areaServed": {
+      "@type": "Country",
+      "name": "GB"
+    }
+  }
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* ─── HERO ─── */
+    .svc-hero { background: var(--navy); padding: 120px 0 0; position: relative; overflow: hidden; }
+    .svc-hero h1 { color: var(--white); font-size: clamp(32px, 4.5vw, 54px); line-height: 1.1; margin-bottom: 22px; max-width: 700px; }
+    .svc-hero h1 em { color: var(--gold); font-style: normal; }
+    .svc-hero-sub { color: rgba(255,255,255,0.6); font-size: 18px; line-height: 1.8; max-width: 560px; margin-bottom: 40px; }
+    .svc-meta { display: flex; gap: 32px; flex-wrap: wrap; margin-bottom: 64px; }
+    .svc-meta-item { display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgba(255,255,255,0.4); font-family: var(--ff-mono); letter-spacing: 0.06em; text-transform: uppercase; }
+    .svc-meta-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+    /* ─── ANCHOR STRIP ─── */
+    .anchor-strip { background: rgba(255,255,255,0.03); border-top: 1px solid rgba(255,255,255,0.07); }
+    .anchor-row { display: flex; overflow-x: auto; }
+    .anchor-item { flex-shrink: 0; padding: 20px 32px; font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); text-decoration: none; border-right: 1px solid rgba(255,255,255,0.07); transition: color 0.2s, background 0.2s; display: flex; align-items: center; gap: 10px; }
+    .anchor-item:hover { color: var(--gold); background: rgba(255,255,255,0.03); }
+    .anchor-num { color: rgba(255,255,255,0.2); }
+    /* ─── SHARED SECTION ─── */
+    .svc-section { padding: 96px 0; }
+    .svc-section--stone { background: var(--off-white); }
+    .svc-section--navy { background: var(--navy); }
+    .svc-section--white { background: var(--white); }
+    .svc-eyebrow { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 12px; }
+    .svc-h2 { font-size: clamp(26px, 3.5vw, 40px); color: var(--navy); line-height: 1.2; margin-bottom: 14px; }
+    .svc-h2--white { color: var(--white); }
+    .svc-intro { font-size: 17px; color: var(--text-light); line-height: 1.8; max-width: 560px; }
+    /* ─── HOW IT WORKS ─── */
+    .how-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: #dee1ea; border-radius: var(--radius-lg); overflow: hidden; margin-top: 48px; }
+    .how-step { background: var(--white); padding: 36px 28px; }
+    .how-num { font-size: 48px; font-weight: 800; color: rgba(47,128,237,0.1); line-height: 1; margin-bottom: 20px; font-family: var(--ff-mono); }
+    .how-title { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .how-body { font-size: 13px; color: var(--text-light); line-height: 1.7; }
+    /* ─── ENGAGEMENT CARDS ─── */
+    .eng-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: #dee1ea; border-radius: var(--radius-lg); overflow: hidden; margin-top: 48px; }
+    .eng-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: #dee1ea; border-radius: var(--radius-lg); overflow: hidden; margin-top: 48px; }
+    .eng-card { background: var(--white); padding: 40px 36px; }
+    .eng-card--dark { background: var(--navy); }
+    .eng-tier { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 16px; display: inline-block; color: var(--gold); }
+    .eng-tier--dark { color: rgba(255,255,255,0.35); }
+    .eng-name { font-size: 20px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+    .eng-name--dark { color: var(--white); }
+    .eng-price { font-family: var(--ff-mono); font-size: 28px; font-weight: 800; color: #2F80ED; margin-bottom: 4px; }
+    .eng-price-note { font-size: 12px; color: var(--text-light); margin-bottom: 22px; font-family: var(--ff-mono); }
+    .eng-price-note--dark { color: rgba(255,255,255,0.35); }
+    .eng-desc { font-size: 14px; line-height: 1.75; margin-bottom: 24px; color: var(--text-light); }
+    .eng-desc--dark { color: rgba(255,255,255,0.6); }
+    .eng-divider { height: 1px; background: #e8eaf0; margin-bottom: 24px; }
+    .eng-divider--dark { background: rgba(255,255,255,0.08); }
+    .eng-dels { display: grid; gap: 10px; margin-bottom: 28px; }
+    .eng-del { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: var(--text); line-height: 1.6; }
+    .eng-del--dark { color: rgba(255,255,255,0.7); }
+    .eng-arrow { color: #2F80ED; flex-shrink: 0; margin-top: 1px; }
+    .eng-arrow--gold { color: var(--gold); flex-shrink: 0; margin-top: 1px; }
+    .eng-for { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.05em; line-height: 1.65; padding: 13px 15px; border-radius: var(--radius); background: rgba(47,128,237,0.04); border: 1px solid rgba(47,128,237,0.1); color: var(--text-light); }
+    .eng-for--dark { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); color: rgba(255,255,255,0.4); }
+    .eng-for strong { color: #2F80ED; }
+    .eng-for--dark strong { color: var(--gold); }
+    /* ─── RETAINER FEATURE ─── */
+    .retainer-card { background: var(--navy); border-radius: var(--radius-lg); padding: 52px 48px; display: grid; grid-template-columns: 1fr 280px; gap: 48px; align-items: start; margin-top: 48px; }
+    .ret-eyebrow { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; display: block; }
+    .ret-name { font-size: 24px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .ret-price { font-family: var(--ff-mono); font-size: 28px; font-weight: 800; color: #2F80ED; margin-bottom: 4px; }
+    .ret-note { font-size: 12px; color: rgba(255,255,255,0.35); font-family: var(--ff-mono); margin-bottom: 24px; }
+    .ret-desc { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.8; margin-bottom: 28px; }
+    .ret-items { display: grid; gap: 10px; }
+    .ret-item { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.6; }
+    .ret-panel { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); padding: 32px 28px; }
+    .ret-panel-label { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 20px; display: block; }
+    .ret-tier { padding: 12px 14px; border-radius: var(--radius); margin-bottom: 8px; }
+    .ret-tier:last-child { margin-bottom: 0; }
+    .ret-tier--a { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); }
+    .ret-tier--b { background: rgba(47,128,237,0.08); border: 1px solid rgba(47,128,237,0.15); }
+    .ret-tier--c { background: rgba(47,128,237,0.12); border: 1px solid rgba(47,128,237,0.2); }
+    .ret-tier-name { font-size: 12px; font-weight: 700; color: var(--white); margin-bottom: 2px; }
+    .ret-tier-price { font-family: var(--ff-mono); font-size: 11px; color: var(--gold); }
+    .ret-tier-note { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 2px; }
+    /* ─── INSIGHT BAND ─── */
+    .svc-insight { background: var(--navy); padding: 72px 0; position: relative; overflow: hidden; }
+    .svc-insight-inner { max-width: 700px; margin: 0 auto; text-align: center; position: relative; }
+    .svc-insight blockquote { font-size: clamp(18px, 2.5vw, 26px); color: var(--white); line-height: 1.5; font-style: normal; margin-bottom: 24px; }
+    .svc-insight blockquote em { color: var(--gold); font-style: normal; }
+    .svc-insight cite { font-family: var(--ff-mono); font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.1em; text-transform: uppercase; }
+    /* ─── COMPARE ─── */
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 48px; }
+    .compare-card { border-radius: var(--radius-lg); padding: 36px 32px; }
+    .compare-card--bad { background: rgba(224,82,82,0.03); border: 1px solid rgba(224,82,82,0.1); }
+    .compare-card--good { background: rgba(47,128,237,0.04); border: 1px solid rgba(47,128,237,0.14); }
+    .compare-label { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 16px; display: block; }
+    .compare-label--bad { color: rgba(224,82,82,0.55); }
+    .compare-label--good { color: #2F80ED; }
+    .compare-title { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 20px; }
+    .compare-list { display: grid; gap: 11px; }
+    .compare-item { font-size: 13px; color: var(--text-light); display: flex; gap: 10px; align-items: flex-start; line-height: 1.6; }
+    .ci-bad { color: rgba(224,82,82,0.45); flex-shrink: 0; }
+    .ci-good { color: #2F80ED; flex-shrink: 0; }
+    /* ─── OS BRIDGE ─── */
+    .os-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 40px; }
+    .os-card { border: 1px solid #e8eaf0; border-radius: var(--radius-lg); padding: 28px 24px; }
+    .os-card--featured { border-color: rgba(47,128,237,0.2); background: rgba(47,128,237,0.02); }
+    .os-stage { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; display: block; }
+    .os-name { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .os-desc { font-size: 13px; color: var(--text-light); margin-bottom: 20px; line-height: 1.65; }
+    .os-price { font-family: var(--ff-mono); font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 16px; }
+    /* ─── FINAL CTA ─── */
+    .svc-cta-wrap { text-align: center; max-width: 600px; margin: 0 auto; }
+    .svc-clarity-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: 48px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; margin-top: 56px; }
+    .scc-eyebrow { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 12px; }
+    .scc-title { font-size: 22px; color: var(--white); margin-bottom: 10px; line-height: 1.3; }
+    .scc-body { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.75; }
+    .scc-price-col { text-align: right; min-width: 180px; }
+    .scc-price { font-family: var(--ff-mono); font-size: 32px; font-weight: 800; color: var(--white); margin-bottom: 16px; }
+    @media (max-width: 1024px) {
+      .eng-grid-3 { grid-template-columns: 1fr; }
+      .how-grid { grid-template-columns: repeat(2,1fr); }
+      .retainer-card { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 900px) {
+      .eng-grid-2 { grid-template-columns: 1fr; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .svc-clarity-card { grid-template-columns: 1fr; }
+      .scc-price-col { text-align: left; }
+      .os-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .how-grid { grid-template-columns: 1fr; }
+      .svc-meta { gap: 16px; }
+    }
+  </style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J12TFT4TCX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J12TFT4TCX');
+</script>
+</head>
+<body>
+
+<nav class="nav scrolled">
+  <a href="../index.html" class="nav-logo"><img src="../images/logo.jpeg" alt="CX Agency" style="width:40px;height:40px;border-radius:8px;object-fit:cover;"></a>
+  <div class="nav-links">
+    <a href="../index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="resources.html">Resources</a>
+    <a href="about.html">About</a>
+  </div>
+  <a href="contact.html" class="btn btn--primary btn--sm">Get in Touch</a>
+</nav>
+
+<!-- HERO -->
+<section class="svc-hero">
+  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
+    <svg width="100%" height="100%" viewBox="0 0 1200 520" fill="none" preserveAspectRatio="xMidYMid slice">
+      <circle cx="1060" cy="140" r="340" stroke="#2F80ED" stroke-width="0.5" opacity="0.1"/>
+      <circle cx="1060" cy="140" r="220" stroke="#2F80ED" stroke-width="0.5" opacity="0.08"/>
+      <circle cx="1060" cy="140" r="110" stroke="#2F80ED" stroke-width="0.5" opacity="0.06"/>
+      <line x1="0" y1="200" x2="1200" y2="200" stroke="#466C9E" stroke-width="0.4" opacity="0.1"/>
+      <line x1="0" y1="360" x2="1200" y2="360" stroke="#466C9E" stroke-width="0.4" opacity="0.07"/>
+      <circle cx="180" cy="90" r="3" fill="#2F80ED" opacity="0.25"/>
+      <circle cx="320" cy="160" r="2" fill="#466C9E" opacity="0.25"/>
+      <circle cx="460" cy="70" r="3" fill="#2F80ED" opacity="0.2"/>
+    </svg>
+  </div>
+  <div class="container" style="position:relative;">
+    <div style="margin-bottom:20px;">
+      <span style="font-family:var(--ff-mono);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);">Signature Services</span>
+    </div>
+    <h1>When you want <em>CX Agency in the room.</em></h1>
+    <p class="svc-hero-sub">The digital OS gives you the system to self-implement. These services give you CX Agency directly involved — building, implementing, and running the operating layer alongside your team. Fixed scope. Clear deliverables. Everything you own at the end.</p>
+    <div class="svc-meta">
+      <div class="svc-meta-item"><span class="svc-meta-dot"></span>Fixed-scope engagements</div>
+      <div class="svc-meta-item"><span class="svc-meta-dot"></span>Operator-led delivery</div>
+      <div class="svc-meta-item"><span class="svc-meta-dot"></span>B2B SaaS focus</div>
+      <div class="svc-meta-item"><span class="svc-meta-dot"></span>You own all assets</div>
+    </div>
+  </div>
+  <!-- ANCHOR STRIP -->
+  <div class="anchor-strip">
+    <div class="container" style="padding:0;">
+      <div class="anchor-row">
+        <a href="#how-it-works" class="anchor-item"><span class="anchor-num">00</span> How it works</a>
+        <a href="#strategy" class="anchor-item"><span class="anchor-num">01</span> Strategy &amp; Transformation</a>
+        <a href="#ai-automation" class="anchor-item"><span class="anchor-num">02</span> AI &amp; Automation</a>
+        <a href="#delivery-ops" class="anchor-item"><span class="anchor-num">03</span> CX Delivery Ops</a>
+        <a href="#why-cx-agency" class="anchor-item"><span class="anchor-num">04</span> Why CX Agency</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="svc-section svc-section--stone" id="how-it-works">
+  <div class="container">
+    <div>
+      <span class="svc-eyebrow">How every engagement works</span>
+      <h2 class="svc-h2">Structured. Fixed scope. Built to hand over.</h2>
+      <p class="svc-intro">Every CX Agency engagement follows the same four-step process — so you always know what you're buying, what you'll receive, and what happens at the end. No strategy decks that gather dust.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-step">
+        <div class="how-num">01</div>
+        <div class="how-title">Discovery Call</div>
+        <div class="how-body">A focused 30-minute intake to understand your current state, key challenge, and what a successful engagement looks like — before any proposal is written. No obligation.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">02</div>
+        <div class="how-title">Fixed Proposal</div>
+        <div class="how-body">A clear proposal with fixed deliverables, timeline, and pricing. No moving targets, no surprise expansions. You know exactly what you're buying before anything starts.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">03</div>
+        <div class="how-title">Hands-On Delivery</div>
+        <div class="how-body">Direct work with your team — frameworks built, playbooks written, systems implemented. Weekly check-ins and a dedicated channel throughout. The founder delivers every engagement.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">04</div>
+        <div class="how-title">Clean Handover</div>
+        <div class="how-body">Full documentation, training, and a 30-day follow-up window. Every asset, template, and framework belongs to you. CX Agency is optional from this point forward.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRATEGY & TRANSFORMATION -->
+<section class="svc-section svc-section--white" id="strategy">
+  <div class="container">
+    <div>
+      <span class="svc-eyebrow">Service Area 01</span>
+      <h2 class="svc-h2">Strategy &amp; Transformation</h2>
+      <p class="svc-intro">Most CX leaders know something isn't working. The challenge is knowing exactly what to fix first — and building a credible plan the rest of the business will fund and follow. That's what this service area does.</p>
+    </div>
+    <div class="eng-grid-2">
+      <div class="eng-card">
+        <div class="eng-tier">Entry · Fixed Scope</div>
+        <div class="eng-name">CX Clarity Scan™</div>
+        <div class="eng-price">From £1,500</div>
+        <div class="eng-price-note">Fixed fee · 2-week engagement · Remote delivery</div>
+        <div class="eng-desc">A rapid maturity audit that gives you a clear picture of where your CX function stands, what's working, and where the highest-leverage improvements are. The external view that most internal leaders can't get themselves — and the starting point for most CX Agency relationships.</div>
+        <div class="eng-divider"></div>
+        <div class="eng-dels">
+          <div class="eng-del"><span class="eng-arrow">→</span>CX maturity assessment across 6 dimensions — retention, onboarding, CS, support, AI readiness, and commercial alignment</div>
+          <div class="eng-del"><span class="eng-arrow">→</span>Touchpoint and journey audit with friction scoring and gap identification</div>
+          <div class="eng-del"><span class="eng-arrow">→</span>Executive summary with a prioritised 30-day action roadmap your team can implement immediately</div>
+          <div class="eng-del"><span class="eng-arrow">→</span>One debrief session with the founder of CX Agency</div>
+        </div>
+        <div class="eng-for"><strong>Best for:</strong> B2B SaaS leaders who know something is off but need an objective, external view to pinpoint where — and what to fix first.</div>
+      </div>
+      <div class="eng-card eng-card--dark">
+        <div class="eng-tier eng-tier--dark">Core Service · Bespoke Scope</div>
+        <div class="eng-name eng-name--dark">Customer Journey Blueprint</div>
+        <div class="eng-price">From £5,000</div>
+        <div class="eng-price-note eng-price-note--dark">Bespoke scope · 4–6 week engagement · Scoped on discovery</div>
+        <div class="eng-desc eng-desc--dark">End-to-end strategic design of your customer experience — from first contact to expansion and advocacy. Built around your ICP, your product motion, and your commercial targets. Not a framework lifted from a playbook. Built for your business, your team, and your market.</div>
+        <div class="eng-divider eng-divider--dark"></div>
+        <div class="eng-dels">
+          <div class="eng-del eng-del--dark"><span class="eng-arrow--gold">→</span>Journey mapping workshops across acquisition, onboarding, adoption, renewal, and expansion</div>
+          <div class="eng-del eng-del--dark"><span class="eng-arrow--gold">→</span>Painpoint heatmap and service blueprint with friction quantification</div>
+          <div class="eng-del eng-del--dark"><span class="eng-arrow--gold">→</span>Prioritised transformation plan with owners, KPIs, timelines, and effort-to-impact scoring</div>
+          <div class="eng-del eng-del--dark"><span class="eng-arrow--gold">→</span>Commercial impact model — how each change connects to NRR and churn reduction</div>
+        </div>
+        <div class="eng-for eng-for--dark"><strong>Best for:</strong> Series A–C SaaS companies with a CX mandate and a leadership team that needs a credible, commercially grounded transformation plan to execute against.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI & AUTOMATION -->
+<section class="svc-section svc-section--stone" id="ai-automation">
+  <div class="container">
+    <div>
+      <span class="svc-eyebrow">Service Area 02</span>
+      <h2 class="svc-h2">AI &amp; Automation</h2>
+      <p class="svc-intro">Most teams have been evaluating AI in CX for 18 months. The ones who are winning have stopped evaluating and started implementing. These engagements are designed to move you from intent to production — with the right architecture from the start.</p>
+    </div>
+    <div class="eng-grid-3">
+      <div class="eng-card">
+        <div class="eng-tier">Entry · Fixed Scope</div>
+        <div class="eng-name">CX Tech Scan</div>
+        <div class="eng-price">£1,500</div>
+        <div class="eng-price-note">Fixed fee · 1-week engagement</div>
+        <div class="eng-desc">A structured review of your current CX tooling and AI usage. Identifies what you have, what's working, and where automation would generate the highest return — before you build, buy, or commit to any vendor.</div>
+        <div class="eng-divider"></div>
+        <div class="eng-dels">
+          <div class="eng-del"><span class="eng-arrow">→</span>Full tech stack audit against a 40-point CX framework</div>
+          <div class="eng-del"><span class="eng-arrow">→</span>Capability gap analysis — where AI is absent, underused, or misaligned</div>
+          <div class="eng-del"><span class="eng-arrow">→</span>Automation opportunity matrix with effort-to-impact scoring for each use case</div>
+        </div>
+        <div class="eng-for"><strong>Best for:</strong> Teams evaluating AI investment who want a clear, objective picture before committing to vendor spend or internal build time.</div>
+      </div>
+      <div class="eng-card eng-card--dark">
+        <div class="eng-tier eng-tier--dark">Core · Bespoke Scope</div>
+        <div class="eng-name eng-name--dark">AI Workflow Accelerator</div>
+        <div class="eng-price">From £4,000</div>
+        <div class="eng-price-note eng-price-note--dark">Bespoke scope · 4–8 weeks · Scoped on discovery</div>
+        <div class="eng-desc eng-desc--dark">Design and implement AI-augmented workflows inside your existing CX operation. We identify the highest-leverage use cases, build the processes, select the right tooling, and make it work alongside — not instead of — your team.</div>
+        <div class="eng-divider eng-divider--dark"></div>
+        <div class="eng-dels">
+          <div class="eng-del eng-del--dark"><span class="eng-arrow--gold">→</span>Use case identification and business case per workflow, ranked by impact</div>
+          <div class="eng-del eng-del--dark"><span class="eng-arrow--gold">→</span>Hybrid AI-human model design — clear handoff logic and escalation paths</div>
+          <div class="eng-del eng-del--dark"><span class="eng-arrow--gold">→</span>ROI forecast and tooling setup with vendor recommendations</div>
+          <div class="eng-del eng-del--dark"><span class="eng-arrow--gold">→</span>Team enablement, process documentation, and a 30-day adoption plan</div>
+        </div>
+        <div class="eng-for eng-for--dark"><strong>Best for:</strong> CS and Support leaders who know AI should be doing more in their operation — and need expert guidance to get there without disrupting the team or their customers.</div>
+      </div>
+      <div class="eng-card">
+        <div class="eng-tier">Premium · Fixed Sprint</div>
+        <div class="eng-name">CX+AI Innovation Sprint</div>
+        <div class="eng-price">From £6,000</div>
+        <div class="eng-price-note">3-week sprint · Remote-first with on-site option</div>
+        <div class="eng-desc">A rapid, structured sprint to test, validate, and embed a specific AI use case inside your CX operation. From concept to working implementation in three weeks — with the training and playbook to scale it from week four.</div>
+        <div class="eng-divider"></div>
+        <div class="eng-dels">
+          <div class="eng-del"><span class="eng-arrow">→</span>Week 1 — use case selection, scope definition, and rapid prototyping</div>
+          <div class="eng-del"><span class="eng-arrow">→</span>Week 2 — pilot implementation with live testing and team involvement</div>
+          <div class="eng-del"><span class="eng-arrow">→</span>Week 3 — enablement materials, scale playbook, and success metrics handover</div>
+        </div>
+        <div class="eng-for"><strong>Best for:</strong> Enterprise CX leaders with a board-level AI mandate and a team ready to move — who need an expert to lead the sprint and own the outcome.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CX DELIVERY OPS -->
+<section class="svc-section svc-section--white" id="delivery-ops">
+  <div class="container">
+    <div>
+      <span class="svc-eyebrow">Service Area 03</span>
+      <h2 class="svc-h2">CX Delivery Ops</h2>
+      <p class="svc-intro">Strategy without an operating layer is just a presentation. These engagements build the infrastructure your team needs to deliver CX consistently, commercially, and at scale — the playbooks, cadences, and systems that make great CX repeatable.</p>
+    </div>
+    <div class="eng-grid-2">
+      <div class="eng-card">
+        <div class="eng-tier">Operational · Fixed Scope</div>
+        <div class="eng-name">Onboarding Optimiser</div>
+        <div class="eng-price">From £3,000</div>
+        <div class="eng-price-note">Fixed fee · 3–4 week engagement</div>
+        <div class="eng-desc">Redesign your onboarding motion to reduce time-to-live, improve early activation, and protect revenue in the first 90 days — the period that determines whether most customers stay or churn. Built for your product, your customer tiers, and your team's actual capacity.</div>
+        <div class="eng-divider"></div>
+        <div class="eng-dels">
+          <div class="eng-del"><span class="eng-arrow">→</span>Onboarding workflow audit with friction point identification and drop-off mapping</div>
+          <div class="eng-del"><span class="eng-arrow">→</span>Tiered onboarding flows designed for your customer segments — not a one-size playbook</div>
+          <div class="eng-del"><span class="eng-arrow">→</span>Success KPI setup — TTL, early churn rate, 30/60/90-day health score thresholds</div>
+          <div class="eng-del"><span class="eng-arrow">→</span>CSM enablement guide for running the new motion from day one</div>
+        </div>
+        <div class="eng-for"><strong>Best for:</strong> Teams with high early-stage churn or inconsistent onboarding quality who need a structured, scalable motion built — not inherited from a template.</div>
+      </div>
+      <div class="eng-card">
+        <div class="eng-tier">Operational · Fixed Scope</div>
+        <div class="eng-name">CS Governance Kit</div>
+        <div class="eng-price">From £2,500</div>
+        <div class="eng-price-note">Fixed fee · 2–3 week engagement</div>
+        <div class="eng-desc">The operating framework your CS team needs to deliver consistent, commercially measurable customer success. Builds the rituals, cadences, and playbooks that make great CS repeatable — and removes the dependency on individual CSM heroics.</div>
+        <div class="eng-divider"></div>
+        <div class="eng-dels">
+          <div class="eng-del"><span class="eng-arrow">→</span>CS role toolkit — expectations, performance scoring, and career progression framework</div>
+          <div class="eng-del"><span class="eng-arrow">→</span>Meeting cadence design and escalation flow documentation</div>
+          <div class="eng-del"><span class="eng-arrow">→</span>Core playbooks: renewals, QBRs, at-risk accounts, and onboarding handoffs</div>
+          <div class="eng-del"><span class="eng-arrow">→</span>Team onboarding guide so every new hire can get up to speed in their first week</div>
+        </div>
+        <div class="eng-for"><strong>Best for:</strong> CS leaders building or rebuilding their team who need a scalable operating structure — not another set of slides that nobody follows.</div>
+      </div>
+    </div>
+
+    <!-- RETAINER CARD -->
+    <div class="retainer-card">
+      <div>
+        <span class="ret-eyebrow">Ongoing · Retainer</span>
+        <div class="ret-name">CX-as-a-Service Retainer</div>
+        <div class="ret-price">£2,000–£5,000/month</div>
+        <div class="ret-note">Rolling 3-month commitment · 3 tiers available</div>
+        <div class="ret-desc">Ongoing embedded CX expertise — CX Agency as your fractional Head of CX. Strategic direction, operational support, and a senior partner in every major CX decision your team makes. Not a consultancy retainer with generic monthly deliverables. A genuine operational partner who knows your business, your numbers, and your customers.</div>
+        <div class="ret-items">
+          <div class="ret-item"><span class="eng-arrow--gold">→</span>Monthly strategic reviews with CX roadmap ownership and prioritisation</div>
+          <div class="ret-item"><span class="eng-arrow--gold">→</span>CX leadership coaching — your managers get a senior sounding board</div>
+          <div class="ret-item"><span class="eng-arrow--gold">→</span>Health tracking, NRR benchmarking, and quarterly churn analysis</div>
+          <div class="ret-item"><span class="eng-arrow--gold">→</span>Dedicated Slack/Zoom access for in-flight decisions and escalations</div>
+          <div class="ret-item"><span class="eng-arrow--gold">→</span>Option to add project sprints at discounted day rates within the retainer</div>
+        </div>
+      </div>
+      <div class="ret-panel">
+        <span class="ret-panel-label">3 tiers available</span>
+        <div class="ret-tier ret-tier--a">
+          <div class="ret-tier-name">Essentials</div>
+          <div class="ret-tier-price">£2,000/month</div>
+          <div class="ret-tier-note">Monthly review + async support</div>
+        </div>
+        <div class="ret-tier ret-tier--b">
+          <div class="ret-tier-name">Growth</div>
+          <div class="ret-tier-price">£3,500/month</div>
+          <div class="ret-tier-note">Weekly involvement + project sprints</div>
+        </div>
+        <div class="ret-tier ret-tier--c">
+          <div class="ret-tier-name">Partner</div>
+          <div class="ret-tier-price">£5,000/month</div>
+          <div class="ret-tier-note">Fractional Head of CX — full integration</div>
+        </div>
+        <div style="margin-top:20px;">
+          <a href="contact.html" class="btn btn--primary" style="display:block;text-align:center;font-size:13px;">Discuss a Retainer →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHT BAND -->
+<section class="svc-insight">
+  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
+    <svg width="100%" height="100%" viewBox="0 0 1200 240" fill="none" preserveAspectRatio="xMidYMid slice">
+      <circle cx="160" cy="120" r="190" stroke="#2F80ED" stroke-width="0.5" opacity="0.07"/>
+      <circle cx="1040" cy="120" r="190" stroke="#2F80ED" stroke-width="0.5" opacity="0.07"/>
+    </svg>
+  </div>
+  <div class="container" style="position:relative;">
+    <div class="svc-insight-inner">
+      <div style="font-family:var(--ff-mono);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:24px;">The principle</div>
+      <blockquote>"Good strategy without execution is just a document. Good execution without strategy is just activity. <em>The point is the system that connects them.</em>"</blockquote>
+      <cite>CX Agency · Built by operators, for operators</cite>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CX AGENCY -->
+<section class="svc-section svc-section--stone" id="why-cx-agency">
+  <div class="container">
+    <div style="text-align:center;max-width:560px;margin:0 auto 0;">
+      <span class="svc-eyebrow">Why CX Agency</span>
+      <h2 class="svc-h2" style="text-align:center;">Operator-led. No overhead. Built to hand over.</h2>
+      <p class="svc-intro" style="max-width:100%;text-align:center;">Most consultancies send a senior partner to pitch and a junior team to deliver. CX Agency works differently — the founder delivers every engagement directly, without markup layers, generic frameworks, or strategy decks that get filed away.</p>
+    </div>
+    <div class="compare-grid">
+      <div class="compare-card compare-card--bad">
+        <span class="compare-label compare-label--bad">Traditional consultancy</span>
+        <div class="compare-title">Expensive overhead. Generic frameworks.</div>
+        <div class="compare-list">
+          <div class="compare-item"><span class="ci-bad">✕</span>Senior partner pitches — junior team delivers</div>
+          <div class="compare-item"><span class="ci-bad">✕</span>Frameworks adapted from generic playbooks</div>
+          <div class="compare-item"><span class="ci-bad">✕</span>Deliverables that create dependency, not capability</div>
+          <div class="compare-item"><span class="ci-bad">✕</span>Retainers that expand without clear value milestones</div>
+          <div class="compare-item"><span class="ci-bad">✕</span>Strategy decks that gather dust after handover</div>
+          <div class="compare-item"><span class="ci-bad">✕</span>Hourly billing that incentivises slower work</div>
+        </div>
+      </div>
+      <div class="compare-card compare-card--good">
+        <span class="compare-label compare-label--good">CX Agency</span>
+        <div class="compare-title">Operator-led. Fixed price. Built to hand over.</div>
+        <div class="compare-list">
+          <div class="compare-item"><span class="ci-good">→</span>The founder delivers every engagement — no layers</div>
+          <div class="compare-item"><span class="ci-good">→</span>Frameworks built from scratch for your business and motion</div>
+          <div class="compare-item"><span class="ci-good">→</span>Every asset is yours — playbooks, templates, systems</div>
+          <div class="compare-item"><span class="ci-good">→</span>Fixed-scope pricing — you know the cost before you start</div>
+          <div class="compare-item"><span class="ci-good">→</span>Hands-on implementation, not strategy presentations</div>
+          <div class="compare-item"><span class="ci-good">→</span>20 years of direct B2B SaaS CX experience in the room</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OS BRIDGE -->
+<section class="svc-section svc-section--white">
+  <div class="container">
+    <div style="max-width:560px;">
+      <span class="svc-eyebrow">Not ready for a service engagement?</span>
+      <h2 class="svc-h2">Start with the OS. Implement at your own pace.</h2>
+      <p class="svc-intro">Every CX Agency service is built on the same frameworks inside the digital operating systems. If you'd rather self-implement first — the OS products give you everything you need at a fraction of the cost of a service engagement.</p>
+    </div>
+    <div class="os-grid">
+      <div class="os-card">
+        <span class="os-stage">Stage 1</span>
+        <div class="os-name">Churn Crusher™ OS</div>
+        <div class="os-desc">Complete retention operating system. Health scoring, early warning playbooks, QBR templates, expansion framework, and 150+ retention plays.</div>
+        <div class="os-price">£197</div>
+        <a href="https://cxagency.gumroad.com/l/churn-crusher" class="btn btn--primary" style="display:block;text-align:center;font-size:13px;padding:10px 16px;">Get Instant Access →</a>
+      </div>
+      <div class="os-card os-card--featured">
+        <span class="os-stage">Stage 2</span>
+        <div class="os-name">AI in CX™ OS</div>
+        <div class="os-desc">175-point AI readiness assessment, vendor scorecard, ROI calculator, and a 4-phase rollout plan for deploying AI inside your CX operation.</div>
+        <div class="os-price">£297</div>
+        <a href="https://cxagency.gumroad.com/l/AI-in-CX" class="btn btn--primary" style="display:block;text-align:center;font-size:13px;padding:10px 16px;">Get Instant Access →</a>
+      </div>
+      <div class="os-card">
+        <span class="os-stage">Best Value</span>
+        <div class="os-name">Complete CX™ OS</div>
+        <div class="os-desc">Both operating systems together. The complete retention and AI transformation toolkit for CX leaders who want the full system from the start.</div>
+        <div class="os-price">£397</div>
+        <a href="https://cxagency.gumroad.com/l/Complete-CX-OS" class="btn btn--primary" style="display:block;text-align:center;font-size:13px;padding:10px 16px;">Get Instant Access →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="svc-section svc-section--navy">
+  <div class="container">
+    <div class="svc-cta-wrap">
+      <span class="svc-eyebrow" style="color:rgba(255,255,255,0.35);">Ready to start?</span>
+      <h2 class="svc-h2 svc-h2--white" style="text-align:center;">Every engagement starts with a 30-minute conversation.</h2>
+      <p style="font-size:16px;color:rgba(255,255,255,0.5);line-height:1.8;margin-bottom:40px;">Not a sales call. A focused conversation to understand where you are, what you're trying to build, and whether CX Agency is the right fit. No obligation, no follow-up pressure.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn--primary btn--lg">Book a Conversation →</a>
+        <a href="churn-diagnostic.html" class="btn btn--ghost">Take the Free Diagnostic First</a>
+      </div>
+    </div>
+    <div class="svc-clarity-card">
+      <div>
+        <div class="scc-eyebrow">Not sure which engagement is right?</div>
+        <div class="scc-title">Start with the CX Clarity Scan™.</div>
+        <div class="scc-body">At £1,500 fixed, the CX Clarity Scan is designed to give you the external view and the prioritised action plan you need — before committing to a larger engagement. It answers the question most leaders are really asking: "where do I start?" Most clients use it to decide what comes next.</div>
+      </div>
+      <div class="scc-price-col">
+        <div class="scc-price">£1,500</div>
+        <a href="contact.html" class="btn btn--primary" style="white-space:nowrap;">Book the Clarity Scan →</a>
+        <div style="font-size:11px;color:rgba(255,255,255,0.25);font-family:var(--ff-mono);margin-top:8px;">Fixed fee · 2 weeks · Remote</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo"><img src="../images/logo.jpeg" alt="CX Agency" style="width:40px;height:40px;border-radius:8px;object-fit:cover;"></a>
+        <p class="fb-tagline">The CX Operating System for B2B SaaS teams. Built by operators, for operators.</p>
+      </div>
+      <div class="footer-col"><h5>Products</h5><ul><li><a href="churn-crusher.html">Churn Crusher OS™</a></li><li><a href="ai-in-cx.html">AI in CX OS™</a></li><li><a href="complete-cx-os.html">The Complete CX OS™</a></li><li><a href="churn-diagnostic.html">Free Churn Diagnostic</a></li></ul></div>
+      <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html#strategy">Strategy &amp; Transformation</a></li><li><a href="services.html#ai-automation">AI &amp; Automation</a></li><li><a href="services.html#delivery-ops">CX Delivery Ops</a></li><li><a href="contact.html">Book a Conversation</a></li></ul></div>
+      <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Get in Touch</a></li><li><a href="mailto:sales@cxagency.io">sales@cxagency.io</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 CX Agency (CX Advisory Ltd). All rights reserved.</p>
+      <div style="display:flex;gap:24px;"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a></div>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

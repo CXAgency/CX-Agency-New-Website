@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <!-- Basic Page Needs -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>CX Agency | B2B SaaS Customer Experience Consultancy UK</title>
+  <meta name="description" content="Boost NRR & crush churn with CX Agency. We're a UK-based B2B SaaS consultancy offering proven CX operating systems for CS leaders. Get your free diagnostic.">
+  <meta name="keywords" content="customer experience, customer success, B2B SaaS, churn reduction, NRR, AI in CX, B2B SaaS, UK">
+  <meta name="author" content="CX Agency">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cxagency.io/index.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="/images/logo.jpeg">
+  <link rel="apple-touch-icon" href="/images/logo.jpeg">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="CX Agency | B2B SaaS Customer Experience Consultancy UK">
+  <meta property="og:description" content="Boost NRR & crush churn with CX Agency. We're a UK-based B2B SaaS consultancy offering proven CX operating systems for CS leaders. Get your free diagnostic.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cxagency.io/index.html">
+  <meta property="og:site_name" content="CX Agency">
+  <meta property="og:image" content="https://cxagency.io/images/logo.jpeg">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CX Agency | B2B SaaS Customer Experience Consultancy UK">
+  <meta name="twitter:description" content="Boost NRR & crush churn with CX Agency. We're a UK-based B2B SaaS consultancy offering proven CX operating systems for CS leaders. Get your free diagnostic.">
+  <meta name="twitter:image" content="https://cxagency.io/images/logo.jpeg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CX Agency (CX Advisory Ltd)",
+    "url": "https://cxagency.io",
+    "logo": "https://cxagency.io/images/logo.jpeg",
+    "description": "UK-based B2B SaaS CX consultancy selling digital operating systems for Customer Success and Customer Experience leaders.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "GB"
+    },
+    "sameAs": []
+  }
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Page-specific */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .revealed { opacity: 1; transform: none; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(47,128,237,0.1); border: 1px solid rgba(47,128,237,0.25); border-radius: 100px; padding: 6px 14px; margin-bottom: 28px; }
+    .hero-badge .hb-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); animation: pulse 2s ease infinite; }
+    @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+    .hero-badge span { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.1em; color: var(--gold); text-transform: uppercase; }
+    .section-intro { max-width: 640px; margin: 0 auto 64px; text-align: center; }
+    .process-strip { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; margin-top: 48px; }
+    .process-step { padding: 32px; border-right: 1px solid var(--stone); }
+    .process-step:last-child { border-right: none; }
+    .ps-num { font-family: var(--ff-display); font-size: 48px; color: var(--stone); line-height: 1; margin-bottom: 14px; }
+    .ps-title { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+    .ps-desc { font-size: 14px; color: var(--text-light); line-height: 1.7; }
+    .trust-bar { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; padding: 32px 0; border-top: 1px solid var(--stone); border-bottom: 1px solid var(--stone); margin-bottom: 64px; }
+    .trust-item { display: flex; align-items: center; gap: 10px; }
+    .trust-item .ti-icon { color: var(--gold-dim); font-size: 18px; }
+    .trust-item span { font-size: 13px; color: var(--text-light); font-weight: 500; }
+    .upsell-strip { background: rgba(29,78,216,0.06); border: 1px solid rgba(29,78,216,0.15); border-radius: var(--radius-lg); padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 32px; }
+    .upsell-strip .us-text h4 { font-size: 16px; color: var(--navy); margin-bottom: 4px; }
+    .upsell-strip .us-text p { font-size: 14px; color: var(--text-light); }
+    .upsell-strip .us-price { font-family: var(--ff-display); font-size: 28px; color: var(--navy); white-space: nowrap; }
+    .free-band { background: var(--off-white); border-radius: var(--radius-lg); padding: 48px 56px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+    .free-band h3 { margin-bottom: 12px; }
+    .free-band p { font-size: 15px; color: var(--text-light); line-height: 1.7; }
+    .free-band-cta { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .free-band-cta .fc-label { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    @media (max-width: 768px) {
+      .process-strip { grid-template-columns: 1fr; }
+      .process-step { border-right: none; border-bottom: 1px solid var(--stone); }
+      .upsell-strip { flex-direction: column; }
+      .free-band { grid-template-columns: 1fr; }
+    }
+  </style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J12TFT4TCX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J12TFT4TCX');
+</script>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav scrolled">
+  <div class="nav-logo">
+    <img src="images/logo.jpeg" alt="CX Agency" style="width:40px;height:40px;border-radius:8px;object-fit:cover;flex-shrink:0;">
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="pages/products.html">Products</a>
+    <a href="pages/services.html">Services</a>
+    <a href="pages/resources.html">Resources</a>
+    <a href="pages/about.html">About</a>
+  </div>
+
+  <a href="pages/contact.html" class="btn btn--primary btn--sm">Get in Touch</a>
+  <div class="nav-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="position:relative;overflow:hidden;">
+  <div id="canvas-container" style="position:absolute; inset:0; z-index:-1; pointer-events:none;"><canvas width="1365" height="945" style="display: block; width: 1365px; height: 945px;"></canvas></div>
+  <!-- Abstract data visual background -->
+  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
+    <!-- Radial grid / orbital rings -->
+    <svg width="560" height="560" viewBox="0 0 560 560" fill="none" style="position:absolute;right:-120px;top:50%;transform:translateY(-50%);opacity:0.055;">
+      <circle cx="280" cy="280" r="240" stroke="#2F80ED" stroke-width="0.8"></circle>
+      <circle cx="280" cy="280" r="180" stroke="#466C9E" stroke-width="0.6"></circle>
+      <circle cx="280" cy="280" r="120" stroke="#2F80ED" stroke-width="0.8"></circle>
+      <circle cx="280" cy="280" r="60" stroke="#466C9E" stroke-width="0.5"></circle>
+      <line x1="40" y1="280" x2="520" y2="280" stroke="#2F80ED" stroke-width="0.5"></line>
+      <line x1="280" y1="40" x2="280" y2="520" stroke="#2F80ED" stroke-width="0.5"></line>
+      <line x1="110" y1="110" x2="450" y2="450" stroke="#466C9E" stroke-width="0.4"></line>
+      <line x1="450" y1="110" x2="110" y2="450" stroke="#466C9E" stroke-width="0.4"></line>
+      <!-- Data nodes -->
+      <circle cx="280" cy="40" r="4" fill="#2F80ED" opacity="0.8"></circle>
+      <circle cx="520" cy="280" r="4" fill="#2F80ED" opacity="0.6"></circle>
+      <circle cx="280" cy="460" r="3" fill="#466C9E" opacity="0.5"></circle>
+      <circle cx="400" cy="160" r="3" fill="#2F80ED" opacity="0.7"></circle>
+      <circle cx="160" cy="400" r="3" fill="#466C9E" opacity="0.5"></circle>
+      <circle cx="400" cy="400" r="2.5" fill="#2F80ED" opacity="0.4"></circle>
+      <circle cx="160" cy="160" r="2.5" fill="#466C9E" opacity="0.4"></circle>
+    </svg>
+    <!-- Corner scatter dots top-left -->
+    <svg width="200" height="200" viewBox="0 0 200 200" fill="none" style="position:absolute;left:-20px;top:-20px;opacity:0.04;">
+      <circle cx="30" cy="30" r="2" fill="#2F80ED"></circle><circle cx="60" cy="20" r="1.5" fill="#466C9E"></circle>
+      <circle cx="90" cy="40" r="2" fill="#2F80ED"></circle><circle cx="20" cy="70" r="1.5" fill="#466C9E"></circle>
+      <circle cx="50" cy="80" r="2.5" fill="#2F80ED"></circle><circle cx="80" cy="60" r="1.5" fill="#466C9E"></circle>
+      <circle cx="110" cy="30" r="1.5" fill="#2F80ED"></circle><circle cx="140" cy="50" r="2" fill="#466C9E"></circle>
+      <circle cx="30" cy="110" r="1.5" fill="#2F80ED"></circle><circle cx="70" cy="120" r="2" fill="#466C9E"></circle>
+    </svg>
+    <!-- Horizontal data flow lines bottom -->
+    <svg width="100%" height="80" viewBox="0 0 1200 80" preserveAspectRatio="none" fill="none" style="position:absolute;bottom:0;left:0;opacity:0.06;">
+      <polyline points="0,60 200,45 400,55 600,30 800,40 1000,20 1200,28" stroke="#2F80ED" stroke-width="1" fill="none"></polyline>
+      <polyline points="0,70 150,65 350,68 550,58 750,62 950,50 1200,55" stroke="#466C9E" stroke-width="0.6" fill="none"></polyline>
+    </svg>
+  </div>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <div class="hb-dot"></div>
+          <span>Built by operators · For B2B SaaS</span>
+        </div>
+        <h1>The CX Operating System for<br><em>B2B SaaS Teams.</em></h1>
+        <p class="hero-sub">Stop managing churn. Start running a retention engine. Practical frameworks, AI-powered toolkits, and operating systems that turn Customer Experience into measurable growth — without consultants.</p>
+        <div class="hero-ctas">
+          <a href="pages/products.html" class="btn btn--primary btn--lg">See All Products</a>
+          <a href="pages/churn-diagnostic.html" class="btn btn--ghost">Free Churn Diagnostic →</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <a href="pages/churn-crusher.html" class="hero-stage-bar" style="text-decoration:none;cursor:pointer;" onmouseover="this.style.borderColor='rgba(47,128,237,0.3)';this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.borderColor='';this.style.background=''">
+          <div class="stage-pip"></div>
+          <div class="stage-text"><strong style="color:white">Stage 1:</strong> Fix the foundation with the Churn Crusher OS</div>
+          <div class="stage-arrow">→</div>
+        </a>
+        <a href="pages/ai-in-cx.html" class="hero-stage-bar" style="text-decoration:none;cursor:pointer;" onmouseover="this.style.borderColor='rgba(47,128,237,0.3)';this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.borderColor='';this.style.background=''">
+          <div class="stage-pip"></div>
+          <div class="stage-text"><strong style="color:white">Stage 2:</strong> Scale with AI using the AI in CX OS</div>
+          <div class="stage-arrow">→</div>
+        </a>
+        <a href="pages/complete-cx-os.html" class="hero-stage-bar" style="border-color:rgba(47,128,237,0.2);background:rgba(47,128,237,0.04);text-decoration:none;cursor:pointer;" onmouseover="this.style.borderColor='rgba(47,128,237,0.4)';this.style.background='rgba(47,128,237,0.08)'" onmouseout="this.style.borderColor='rgba(47,128,237,0.2)';this.style.background='rgba(47,128,237,0.04)'">
+          <div class="stage-pip" style="background:#2d9d6e"></div>
+          <div class="stage-text"><strong style="color:#2F80ED">★ Best value:</strong> The Complete CX OS — both stages from £397</div>
+          <div class="stage-arrow">→</div>
+        </a>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:4px">
+          <div class="hero-stat-card">
+            <div class="stat-num">35%</div>
+            <div class="stat-label">churn reduction when AI in CX is implemented correctly</div>
+            <div class="stat-source">BCG / Gainsight</div>
+          </div>
+          <div class="hero-stat-card">
+            <div class="stat-num">200%</div>
+            <div class="stat-label">average ROI from AI in CX programmes</div>
+            <div class="stat-source">BCG Research</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY STRIP -->
+<section class="journey">
+  <div class="container">
+    <div class="journey-grid">
+      <div class="journey-step">
+        <div class="js-num">Entry</div>
+        <div class="js-label">Find the problem</div>
+        <div class="js-product">Free Churn Diagnostic</div>
+        <div class="js-desc">8-question self-assessment. Get a personalised recommendation in 5 minutes.</div>
+        <div class="js-price">Free · No card needed</div>
+      </div>
+      <div class="journey-step active">
+        <div class="js-num">Stage 1</div>
+        <div class="js-label">Fix the foundation</div>
+        <div class="js-product">Churn Crusher OS™</div>
+        <div class="js-desc">Diagnose churn, build the retention system, establish the metrics that matter.</div>
+        <div class="js-price">From £197</div>
+      </div>
+      <div class="journey-step active">
+        <div class="js-num">Stage 2</div>
+        <div class="js-label">Scale with AI</div>
+        <div class="js-product">AI in CX OS™</div>
+        <div class="js-desc">Implement AI on top of a solid CX foundation. Run your retention engine at scale.</div>
+        <div class="js-price">From £297</div>
+      </div>
+      <div class="journey-step">
+        <div class="js-num">Stage 3</div>
+        <div class="js-label">Expert support</div>
+        <div class="js-product">Services</div>
+        <div class="js-desc">CX Agency builds, implements, or runs the OS with you. High-touch engagements.</div>
+        <div class="js-price">From £2,000</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="section--sm">
+  <div class="container">
+    <div class="trust-bar">
+      <div class="trust-item">
+        <div class="ti-icon">◈</div>
+        <span>20 years of B2B SaaS CX experience</span>
+      </div>
+      <div class="trust-item">
+        <div class="ti-icon">◈</div>
+        <span>Research-grounded frameworks</span>
+      </div>
+      <div class="trust-item">
+        <div class="ti-icon">◈</div>
+        <span>Built for Monday morning, not slide decks</span>
+      </div>
+      <div class="trust-item">
+        <div class="ti-icon">◈</div>
+        <span>GDPR compliant</span>
+      </div>
+    </div>
+
+    <!-- PRODUCTS PREVIEW -->
+    <div class="section-intro reveal">
+      <div class="label">The CX Agency Product Suite</div>
+      <h2>Choose your stage. Own the system.</h2>
+      <p class="body">Every product is a standalone operating system — practical, operator-ready, and designed to compound over time. Buy what you need now. Upgrade when you're ready.</p>
+    </div>
+
+    <div class="products-grid reveal">
+      <!-- Churn Crusher -->
+      <div class="product-card">
+        <div class="product-card-badge">Stage 1</div>
+        <div class="product-card-body">
+          <div class="product-card-stage">Retention Foundation</div>
+          <h3>Churn Crusher OS™</h3>
+          <p class="card-desc">Diagnose where churn is coming from, build the retention framework, and establish the metrics your team needs to stop the bleeding — in 30 days.</p>
+          <div class="card-price">£197 <span>one-time</span></div>
+          <ul>
+            <li>Churn root cause diagnosis framework</li>
+            <li>Retention playbook &amp; workflow templates</li>
+            <li>Google Sheets KPI dashboard</li>
+            <li>90-day implementation roadmap</li>
+            <li>Segmentation &amp; health score guide</li>
+          </ul>
+          <a href="pages/churn-crusher.html" class="card-cta">Get Churn Crusher OS →</a>
+        </div>
+      </div>
+
+      <!-- AI in CX OS -->
+      <div class="product-card featured">
+        <div class="product-card-badge">Stage 2 · Most Detailed</div>
+        <div class="product-card-body">
+          <div class="product-card-stage">AI Implementation</div>
+          <h3>AI in CX OS™</h3>
+          <p class="card-desc">The complete system for implementing AI in your customer experience operations — from readiness assessment through vendor selection, pilot, and scale.</p>
+          <div class="card-price">£297 <span>one-time</span></div>
+          <ul>
+            <li>50-page AI in CX Playbook (8 modules)</li>
+            <li>AI Readiness Assessment (175 points)</li>
+            <li>ROI Calculator with 3-year projections</li>
+            <li>Vendor Evaluation Scorecard</li>
+            <li>5 Notion databases + 6 Sheets templates</li>
+            <li>4-Phase Implementation Framework</li>
+          </ul>
+          <a href="pages/ai-in-cx.html" class="card-cta">Get AI in CX OS →</a>
+        </div>
+      </div>
+
+      <!-- Complete CX OS -->
+      <div class="product-card bundle">
+        <div class="product-card-badge">★ Best Value — Both Stages</div>
+        <div class="product-card-body">
+          <div class="product-card-stage">Complete System</div>
+          <h3>The Complete CX OS™</h3>
+          <p class="card-desc">The full CX operating system — from fixing churn to scaling with AI. Everything in both OS products, plus an onboarding call and 12 months of updates.</p>
+          <div class="card-price">£397 <span>one-time</span></div>
+          <div class="card-saving">Save £97 vs buying separately</div>
+          <ul>
+            <li>Everything in Churn Crusher OS</li>
+            <li>Everything in AI in CX OS</li>
+            <li>60-min onboarding call with CX Agency</li>
+            <li>Priority email support (30 days)</li>
+            <li>All future OS updates (12 months)</li>
+          </ul>
+          <a href="pages/complete-cx-os.html" class="card-cta">Get the Complete CX OS →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="upsell-strip reveal">
+      <div class="us-text">
+        <h4>Need hands-on support implementing the OS?</h4>
+        <p>CX Agency works directly with B2B SaaS teams who want expert help building, implementing, or running their CX Operating System. Structured engagements. Clear deliverables.</p>
+      </div>
+      <div class="us-price">From £2,000</div>
+      <a href="pages/services.html" class="btn btn--outline">View Services →</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS SECTION -->
+<section class="section section--dark">
+  <!-- Abstract grid visual -->
+  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
+    <svg width="400" height="400" viewBox="0 0 400 400" fill="none" style="position:absolute;right:-60px;bottom:-60px;opacity:0.05;">
+      <rect x="20" y="20" width="360" height="360" rx="6" stroke="#2F80ED" stroke-width="1"></rect>
+      <line x1="20" y1="110" x2="380" y2="110" stroke="#466C9E" stroke-width="0.5"></line>
+      <line x1="20" y1="200" x2="380" y2="200" stroke="#466C9E" stroke-width="0.5"></line>
+      <line x1="20" y1="290" x2="380" y2="290" stroke="#466C9E" stroke-width="0.5"></line>
+      <line x1="110" y1="20" x2="110" y2="380" stroke="#466C9E" stroke-width="0.5"></line>
+      <line x1="200" y1="20" x2="200" y2="380" stroke="#466C9E" stroke-width="0.5"></line>
+      <line x1="290" y1="20" x2="290" y2="380" stroke="#466C9E" stroke-width="0.5"></line>
+      <rect x="60" y="250" width="60" height="90" rx="3" fill="#2F80ED" opacity="0.15"></rect>
+      <rect x="170" y="190" width="60" height="150" rx="3" fill="#2F80ED" opacity="0.2"></rect>
+      <rect x="280" y="120" width="60" height="220" rx="3" fill="#2F80ED" opacity="0.25"></rect>
+      <polyline points="90,255 200,192 310,122" stroke="#2F80ED" stroke-width="1.5" fill="none" opacity="0.6"></polyline>
+      <circle cx="90" cy="255" r="4" fill="#2F80ED" opacity="0.7"></circle>
+      <circle cx="200" cy="192" r="4" fill="#2F80ED" opacity="0.7"></circle>
+      <circle cx="310" cy="122" r="4" fill="#2F80ED" opacity="0.7"></circle>
+    </svg>
+  </div>
+  <div class="container">
+    <div class="section-intro" style="max-width:600px;margin:0 auto 64px;text-align:center;">
+      <div class="label">The Evidence Base</div>
+      <h2>What AI in CX delivers — when done right.</h2>
+      <p class="body" style="color:rgba(255,255,255,0.65)">The OS frameworks are built specifically to achieve these research-verified outcomes.</p>
+    </div>
+    <div class="stats-grid reveal">
+      <div class="stat-item">
+        <div class="si-num">35%</div>
+        <div class="si-label">churn reduction in 12 months with correct AI in CX implementation</div>
+        <div class="si-source">BCG / Gainsight Research</div>
+      </div>
+      <div class="stat-item">
+        <div class="si-num">200%</div>
+        <div class="si-label">average ROI from AI in CX programmes across B2B SaaS</div>
+        <div class="si-source">BCG AI in CX Report</div>
+      </div>
+      <div class="stat-item">
+        <div class="si-num">60%</div>
+        <div class="si-label">improvement in onboarding completion rates with AI guidance</div>
+        <div class="si-source">BCG / Gainsight</div>
+      </div>
+      <div class="stat-item">
+        <div class="si-num">50%</div>
+        <div class="si-label">reduction in support ticket volume without CSAT degradation</div>
+        <div class="si-source">Zendesk CX Trends 2026</div>
+      </div>
+    </div>
+    <hr class="divider divider--dark" style="margin-top:64px;margin-bottom:48px">
+    <div class="callout-block reveal">
+      <blockquote>"Only 25% of AI pilots ever reach production. The reason is almost never the technology. It's the absence of a framework."</blockquote>
+      <cite>VUX World AI Research 2025 · The problem this OS solves.</cite>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section section--stone">
+  <div class="container">
+    <div class="section-intro reveal">
+      <div class="label">The Operator Approach</div>
+      <h2>Built for Monday morning. Not Friday's slide deck.</h2>
+      <p class="body">Every framework and tool in the OS is designed to be used by your team in the first week of ownership — no consultants, no onboarding sprints, no guesswork.</p>
+    </div>
+    <div class="process-strip reveal">
+      <div class="process-step">
+        <div class="ps-num">01</div>
+        <div class="ps-title">Diagnose first</div>
+        <div class="ps-desc">Start with the free Churn Diagnostic or the 175-point AI Readiness Assessment. Know exactly where you are before you decide where to go. No guessing, no generic frameworks applied blindly.</div>
+      </div>
+      <div class="process-step">
+        <div class="ps-num">02</div>
+        <div class="ps-title">Use the system</div>
+        <div class="ps-desc">The OS is a complete operating system — playbooks, dashboards, Notion databases, implementation roadmaps. Everything connects. Run it from day one. No building from scratch.</div>
+      </div>
+      <div class="process-step">
+        <div class="ps-num">03</div>
+        <div class="ps-title">Measure what matters</div>
+        <div class="ps-desc">Every OS includes KPI dashboards and metric frameworks tracking the numbers that actually drive NRR — not the vanity metrics that look good in a QBR but tell you nothing about retention risk.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EBOOKS SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="section-intro reveal">
+      <div class="label">CX Agency Resources</div>
+      <h2>Guides for CX leaders who want to move fast.</h2>
+      <p class="body">Practical, operator-focused reading. Each guide is designed to give you something you can act on this week — not theory to file away.</p>
+    </div>
+    <div class="ebooks-grid reveal">
+      <!-- Augmented CX Leader -->
+      <div class="ebook-card">
+        <div class="ebook-thumb">
+          <div class="ebook-thumb-content">
+            <div class="et-label">CX Agency · Free Guide</div>
+            <div class="et-title">The Augmented CX Leader</div>
+          </div>
+        </div>
+        <div class="ebook-card-body">
+          <h4>The Augmented CX Leader</h4>
+          <p>How to use AI to supercharge your CX team — not replace them. Efficiency is for algorithms. Experience is for humans.</p>
+          <div class="ebook-card-footer">
+            <div class="ebook-price">Free</div>
+            <a href="pages/ebook-augmented-cx-leader.html" class="ebook-cta">Download →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Support Tickets -->
+      <div class="ebook-card">
+        <div class="ebook-thumb">
+          <div class="ebook-thumb-content">
+            <div class="et-label">CX Agency · 30-Day Guide</div>
+            <div class="et-title">How to Reduce Support Tickets by 18% in One Month</div>
+          </div>
+        </div>
+        <div class="ebook-card-body">
+          <h4>Reduce Support Tickets by 18%</h4>
+          <p>A practical 30-day roadmap to reduce ticket volume without hiring more staff. Shift from reactive firefighting to proactive success.</p>
+          <div class="ebook-card-footer">
+            <div class="ebook-price">£19</div>
+            <a href="pages/ebook-reduce-tickets.html" class="ebook-cta">Get it →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Designed to Stay - repurposed as free lead magnet -->
+      <div class="ebook-card">
+        <div class="ebook-thumb">
+          <div class="ebook-thumb-content">
+            <div class="et-label">CX Agency · Free Playbook</div>
+            <div class="et-title">Designed to Stay</div>
+          </div>
+        </div>
+        <div class="ebook-card-body">
+          <h4>Designed to Stay</h4>
+          <p>The practical guide to SaaS onboarding and customer journey design. Build journeys that create trust, momentum — and long-term revenue.</p>
+          <div class="ebook-card-footer">
+            <div class="ebook-price">Free</div>
+            <a href="pages/ebook-designed-to-stay.html" class="ebook-cta">Download →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FREE DIAGNOSTIC BAND -->
+<section class="section--sm">
+  <div class="container">
+    <div class="free-band reveal">
+      <div>
+        <div class="label">Free · Takes 5 Minutes</div>
+        <h3>Not sure where to start?<br>Take the Churn Diagnostic.</h3>
+        <p>8 questions. Personalised score. A clear recommendation on which OS product is right for your team right now — or whether you need a discovery call instead.</p>
+        <p style="margin-top:10px;font-size:14px;color:var(--muted)">No sales call. No credit card. Just clarity.</p>
+      </div>
+      <div class="free-band-cta">
+        <div class="fc-label">Free assessment</div>
+        <a href="pages/churn-diagnostic.html" class="btn btn--primary btn--lg">Start the Diagnostic →</a>
+        <span style="font-size:12px;color:var(--muted);margin-top:6px">Takes 5 minutes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES TEASER -->
+<section class="section section--stone">
+  <div class="container">
+    <div class="section-intro reveal">
+      <div class="label">Signature Services</div>
+      <h2>When you want CX Agency in the room.</h2>
+      <p class="body">The OS gives you the system. These services give you CX Agency directly involved — building, implementing, or running the OS with your team. Three structured engagements. Clear deliverables. No bloated retainers.</p>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <div class="service-tier">Entry Service</div>
+        <h3>CX Diagnostic</h3>
+        <div class="service-price">From £2,000 <span>/ engagement</span></div>
+        <p>A focused 2–3 week engagement to identify exactly where retention is breaking and what to fix first. Deliverable: a prioritised action plan your team can implement immediately.</p>
+        <div class="service-for">For: Teams who know something is wrong but can't pinpoint it. Often the starting point for larger engagements.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-tier">Core Service</div>
+        <h3>CX OS Build</h3>
+        <div class="service-price">From £6,000 <span>/ engagement</span></div>
+        <p>We build a custom CX Operating System for your business — frameworks, workflows, playbooks, and metrics adapted to your product, team, and motion. 6–8 weeks. You own everything.</p>
+        <div class="service-for">For: CS leaders who want the system without the self-implementation time. Series A–C SaaS companies.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-tier">Premium Service</div>
+        <h3>AI in CX Implementation</h3>
+        <div class="service-price">From £12,000 <span>/ engagement</span></div>
+        <p>End-to-end AI in CX implementation — vendor selection, pilot design, team training, launch, and scale. 12–18 week engagement for enterprise teams with a mandate to move.</p>
+        <div class="service-for">For: Enterprise CX and CS leaders with an AI mandate and a team ready to act.</div>
+      </div>
+    </div>
+    <div class="text-center mt-48 reveal">
+      <a href="pages/services.html" class="btn btn--outline">View All Services →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section" style="position:relative;overflow:hidden;">
+  <!-- Abstract wave visual -->
+  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
+    <svg width="100%" height="100%" viewBox="0 0 1200 300" preserveAspectRatio="none" fill="none" style="position:absolute;bottom:0;left:0;opacity:0.07;">
+      <polygon points="0,300 0,180 200,140 400,160 600,100 800,130 1000,80 1200,110 1200,300" fill="#2F80ED"></polygon>
+      <polygon points="0,300 0,220 300,200 500,210 700,170 900,185 1200,150 1200,300" fill="#466C9E" opacity="0.5"></polygon>
+    </svg>
+    <svg width="200" height="200" viewBox="0 0 200 200" fill="none" style="position:absolute;right:80px;top:20px;opacity:0.06;">
+      <circle cx="100" cy="100" r="80" stroke="#2F80ED" stroke-width="1"></circle>
+      <circle cx="100" cy="100" r="50" stroke="#466C9E" stroke-width="0.6"></circle>
+      <circle cx="100" cy="100" r="20" stroke="#2F80ED" stroke-width="0.8"></circle>
+      <circle cx="100" cy="20" r="3" fill="#2F80ED"></circle>
+      <circle cx="180" cy="100" r="3" fill="#2F80ED"></circle>
+    </svg>
+  </div>
+  <div class="container" style="position:relative;">
+    <div class="label label--muted">Ready when you are</div>
+    <h2>Start where you are.<br>Build the system you need.</h2>
+    <p>Take the free diagnostic to find out where to start. Or go straight to the product that fits your stage.</p>
+    <div class="cta-btns">
+      <a href="pages/churn-diagnostic.html" class="btn btn--ghost">Free Churn Diagnostic</a>
+      <a href="pages/products.html" class="btn btn--primary btn--lg">See All Products →</a>
+      <a href="pages/contact.html" class="btn btn--ghost">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+    <img src="images/logo.jpeg" alt="CX Agency" style="width:40px;height:40px;border-radius:8px;object-fit:cover;flex-shrink:0;">
+  </div>
+        <p class="fb-tagline">The CX Operating System for B2B SaaS teams. Built by operators, for operators. 20 years of direct CX experience.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="pages/churn-crusher.html">Churn Crusher OS™</a></li>
+          <li><a href="pages/ai-in-cx.html">AI in CX OS™</a></li>
+          <li><a href="pages/complete-cx-os.html">The Complete CX OS™</a></li>
+          <li><a href="pages/churn-diagnostic.html">Free Churn Diagnostic</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="pages/services.html">CX Diagnostic</a></li>
+          <li><a href="pages/services.html">CX OS Build</a></li>
+          <li><a href="pages/services.html">AI Implementation</a></li>
+          <li><a href="pages/contact.html">Get in Touch</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/resources.html">Resources</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+          <li><a href="mailto:sales@cxagency.io">sales@cxagency.io</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 CX Agency. All rights reserved. GDPR compliant.</p>
+      <div style="display:flex;gap:24px">
+        <a href="pages/privacy.html">Privacy Policy</a>
+        <a href="pages/terms.html">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+    const geometry = new THREE.BufferGeometry();
+    const vertices = [];
+    for (let i = 0; i < 2000; i++) {
+        vertices.push(THREE.MathUtils.randFloatSpread(2000), THREE.MathUtils.randFloatSpread(2000), THREE.MathUtils.randFloatSpread(2000));
+    }
+    geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+    const particles = new THREE.Points(geometry, new THREE.PointsMaterial({ color: 0x2F80ED, size: 2, transparent: true, opacity: 0.4 }));
+    scene.add(particles);
+
+    camera.position.z = 1000;
+
+    function animate() {
+        requestAnimationFrame(animate);
+        particles.rotation.y += 0.0005;
+        particles.rotation.x += 0.0002;
+        renderer.render(scene, camera);
+    }
+    animate();
+    window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+</script>
+
+
+
+</body></html>
